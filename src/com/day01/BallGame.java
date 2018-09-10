@@ -21,10 +21,10 @@ public class BallGame extends JFrame{
 	
 	//boolean right = true;
 	
-	double degree = 3.14/3;//»¡¶È£¬´Ë´¦ÊÇ60¶È
-	//»­´°¿ÚµÄ·½·¨
+	double degree = 3.14/3;//å¼§åº¦ï¼Œæ­¤å¤„æ˜¯60åº¦
+	//ç”»çª—å£çš„æ–¹æ³•
 	public void paint(Graphics g) {
-		System.out.println("´°¿Ú±»»­ÁËÒ»´Î");
+		System.out.println("çª—å£è¢«ç”»äº†ä¸€æ¬¡");
 		g.drawImage(desk, 0, 0, null);
 		g.drawImage(ball, (int)x,(int)y, null);
 		/*if(right) {
@@ -42,21 +42,21 @@ public class BallGame extends JFrame{
 		x = x + 10 * Math.cos(degree);
 		y = y + 10 * Math.sin(degree);
 		
-		if(y > 500-40-30 || y < 40+40) {//500ÊÇ×À×Ó¸ß¶È£¬40ÊÇ×À×Ó±ß¿ò£¬30ÊÇÐ¡ÇòÖ±¾¶£¬×îºó40ÊÇ±êÌâÀ¸¸ß¶È
+		if(y > 500-40-30 || y < 40+40) {//500æ˜¯æ¡Œå­é«˜åº¦ï¼Œ40æ˜¯æ¡Œå­è¾¹æ¡†ï¼Œ30æ˜¯å°çƒç›´å¾„ï¼Œæœ€åŽ40æ˜¯æ ‡é¢˜æ é«˜åº¦
 			degree = -degree;
 		}
-		//Åöµ½×óÓÒ±ß½ç
+		//ç¢°åˆ°å·¦å³è¾¹ç•Œ
 		if(x > 856-40-30 || x < 40) {
 			degree = 3.14 - degree;
 		}
 	}
 	
-	//´°¿Ú¼ÓÔØ
+	//çª—å£åŠ è½½
 	void launchFrame() {
 		setSize(856,500);
 		setLocation(50, 50);
 		setVisible(true);
-		//ÖØ»­´°¿Ú£¬Ã¿Ãë»­25´Î
+		//é‡ç”»çª—å£ï¼Œæ¯ç§’ç”»25æ¬¡
 		while(true) {			
 			repaint();
 			try {
@@ -67,9 +67,7 @@ public class BallGame extends JFrame{
 		}
 	}
 	
-	//¼ÓÔØÍ¼Æ¬
-	
-	
+	//åŠ è½½å›¾ç‰‡	
 	public static void main(String[] args) {
 		BallGame game = new BallGame();
 		game.launchFrame();
